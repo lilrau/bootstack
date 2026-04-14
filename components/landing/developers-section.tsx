@@ -5,52 +5,54 @@ import { Copy, Check } from "lucide-react";
 
 const codeExamples = [
   {
-    label: "Install",
-    code: `npm install @optimus/sdk
-
-# or
-yarn add @optimus/sdk
-pnpm add @optimus/sdk`,
+    label: "Contact",
+    code: `export const contact = {
+        name:     "Raul Souza",
+        email:    "raul.moonrocklabs@gmail.com",
+        linkedin: "https://www.linkedin.com/in/lilrau/",
+        github:   "https://github.com/lilrau",
+        website:  "https://lilrau-portfolio.vercel.app/",
+    }`,
   },
   {
-    label: "Initialize",
-    code: `import { Optimus } from '@optimus/sdk'
-
-const optimus = new Optimus({
-  apiKey: process.env.OPTIMUS_KEY
-})`,
-  },
-  {
-    label: "Deploy",
-    code: `const app = await optimus.deploy({
-  name: 'my-app',
-  region: 'auto',
-  scaling: {
-    min: 1,
-    max: 100
-  }
-})
-
-console.log('Live at:', app.url)`,
+    label: "About me",
+    code: `class Raul:
+    def __init__(self):
+        self.name = "Raul Souza"
+        self.age = 23
+        self.country = "Brazil"
+        self.languages = ["Portuguese", "English"]
+        self.code = {
+            "frontend": ["TypeScript", "React", "Next.js", 
+                        "HTML", "CSS", "JavaScript", "Tailwind"],
+            "backend": ["Node.js", "PHP", "Laravel", "REST APIs", 
+                        "SQL"],
+        }
+        self.tools = ["n8n", "Docker", "Git", "GitHub", "Jira", 
+                      "Railway", "Vercel", "Linux", "Python", 
+                      "JavaScript", "TypeScript", "React", 
+                      "Next.js", "HTML", "CSS", "JavaScript", 
+                      "Tailwind"]
+        self.hobbies = ["Design", "Music"]`,
   },
 ];
 
 const features = [
   { 
-    title: "TypeScript native", 
-    description: "Full type safety with auto-generated types."
+    title: "Next.js 15", 
+    description: "Quick development, Vercel handles the rest."
   },
   { 
-    title: "Zero config", 
-    description: "Sensible defaults that just work."
+    title: "Tailwind CSS", 
+    description: "Beautiful, responsive, and customizable."
   },
   { 
-    title: "Edge-ready", 
-    description: "Runs anywhere: Node, Deno, Bun, browsers."
+    title: "Vercel", 
+    description: "Easy to deploy and scale."
   },
   { 
-    title: "12KB gzipped", 
-    description: "Lightweight with zero dependencies."
+    title: "Cursor / v0 / Codex CLI", 
+    description: "This project is for community, but also for testing AI coding capabilities with a real developer behind the code."
   },
 ];
 
@@ -119,16 +121,15 @@ export function DevelopersSection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px bg-foreground/30" />
-              For developers
+              For community
             </span>
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
-              Built by devs.
+              Built by a dev.
               <br />
               <span className="text-muted-foreground">For devs.</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              A thoughtfully designed SDK that gets out of your way. 
-              Ship faster with intuitive APIs and exceptional documentation.
+              Stop spitting bullshit on AI and charging for it. Let's keep it open source. (But thanks Cursor for building this app.)
             </p>
             
             {/* Features */}
@@ -219,11 +220,11 @@ export function DevelopersSection() {
             
             {/* Links */}
             <div className="mt-6 flex items-center gap-6 text-sm">
-              <a href="#" className="text-foreground hover:underline underline-offset-4">
-                Read the docs
+              <a href="https://www.linkedin.com/in/lilrau/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline underline-offset-4">
+                View on LinkedIn
               </a>
               <span className="text-foreground/20">|</span>
-              <a href="#" className="text-muted-foreground hover:text-foreground">
+              <a href="https://github.com/lilrau" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
                 View on GitHub
               </a>
             </div>
