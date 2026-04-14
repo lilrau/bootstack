@@ -6,7 +6,7 @@ const steps = [
   {
     number: "I",
     title: "Connect your tools",
-    description: "Integrate with your existing stack in minutes. We support 200+ data sources out of the box.",
+    description: "Start by running a export script, it will generate a JSON file with your current setup.",
     code: `import { optimus } from '@optimus/core'
 
 optimus.connect({
@@ -16,8 +16,8 @@ optimus.connect({
   },
   {
     number: "II",
-    title: "Build your workflow",
-    description: "Design powerful automations with our visual builder or write code directly.",
+    title: "Upload your setup",
+    description: "Upload the JSON file to our website, select your Linux distribution and we will generate a installation script for you.",
     code: `optimus.workflow('process', {
   trigger: 'event',
   actions: [
@@ -29,14 +29,9 @@ optimus.connect({
   },
   {
     number: "III",
-    title: "Ship to production",
-    description: "Deploy globally with zero configuration. Your app goes live in under 30 seconds.",
-    code: `optimus.deploy({
-  target: 'production',
-  regions: 'auto'
-})
-
-// Deployed to 12 regions`,
+    title: "Run the script",
+    description: "Run the script in your terminal, it will install all the packages you need.",
+    code: `./install.sh`,
   },
 ];
 
@@ -97,7 +92,7 @@ export function HowItWorksSection() {
           >
             Three steps.
             <br />
-            <span className="text-background/50">Infinite possibilities.</span>
+            <span className="text-background/50">No more work.</span>
           </h2>
         </div>
 

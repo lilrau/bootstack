@@ -5,26 +5,26 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     number: "01",
-    title: "Instant Deployment",
-    description: "Push to production in seconds. Our edge network ensures your applications load instantly, anywhere in the world.",
+    title: "Multi-distro Support",
+    description: "Supports APT, Pacman, DNF, Zypper, and APK package managers. Works with Ubuntu, Arch, Fedora, openSUSE, Alpine, and more.",
     visual: "deploy",
   },
   {
     number: "02",
-    title: "AI-Native Workflows",
-    description: "Build intelligent applications with built-in AI capabilities. From inference to training, everything scales automatically.",
+    title: "Smart App Selection",
+    description: "Browse apps by categories like development, browsers, communication, gaming, and more. Find exactly what you need for your workflow.",
     visual: "ai",
   },
   {
     number: "03",
-    title: "Real-time Collaboration",
-    description: "Work together seamlessly. Live preview, instant feedback, and version control that actually makes sense.",
+    title: "Instant Script Generation",
+    description: "Generate installation scripts instantly with one click. No more manual package hunting or dependency management. Remember losing hours after formatting your machine? It's time to change that.",
     visual: "collab",
   },
   {
     number: "04",
-    title: "Enterprise Security",
-    description: "Bank-grade encryption, SOC 2 compliance, and granular access controls. Your data stays yours.",
+    title: "Secure ",
+    description: "This tool is open source and we don't store any of your data. You can check the installation script and see what it does. You should also understand how it's generated on our Github.",
     visual: "security",
   },
 ];
@@ -323,16 +323,16 @@ export function FeaturesSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Capabilities
+            Features
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Everything you need.
+            Everything you need
             <br />
-            <span className="text-muted-foreground">Nothing you don&apos;t.</span>
+            <span className="text-muted-foreground">to setup your Linux.</span>
           </h2>
         </div>
 

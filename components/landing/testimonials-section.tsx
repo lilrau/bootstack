@@ -4,32 +4,32 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Optimus transformed our deployment pipeline. What used to take hours now happens in seconds.",
-    author: "Sarah Chen",
-    role: "CTO",
-    company: "Meridian Labs",
-    metric: "10x faster deployments",
+    quote: "BootStack saved me hours after reinstalling Ubuntu. All my dev tools were back in minutes.",
+    author: "Alex Kumar",
+    role: "Developer",
+    company: "Community",
+    metric: "2 hours saved",
   },
   {
-    quote: "The developer experience is unmatched. Our team's productivity has never been higher.",
-    author: "Marcus Webb",
-    role: "Engineering Lead",
-    company: "Flux Systems",
-    metric: "40% more features shipped",
+    quote: "Finally, a tool that understands Linux package managers. Switched from Arch to Fedora seamlessly.",
+    author: "Maria Silva",
+    role: "System Administrator",
+    company: "Open Source",
+    metric: "5 distros supported",
   },
   {
-    quote: "Finally, infrastructure that scales with our ambition. Zero downtime since we switched.",
-    author: "Elena Rodriguez",
-    role: "VP Engineering",
-    company: "Beacon AI",
-    metric: "99.99% uptime",
+    quote: "The export/import feature is a game changer. I can share my setup with the whole team.",
+    author: "David Chen",
+    role: "DevOps Engineer",
+    company: "Community",
+    metric: "Team setup synced",
   },
   {
-    quote: "The integrations are seamless. We connected our entire stack in a single afternoon.",
-    author: "James Liu",
-    role: "Founder",
-    company: "Prism Analytics",
-    metric: "50+ integrations used",
+    quote: "As a Linux beginner, BootStack made setting up my first machine incredibly simple.",
+    author: "Sarah Johnson",
+    role: "Student",
+    company: "Open Source",
+    metric: "Zero headaches",
   },
 ];
 
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
         {/* Section Label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            What people say
+            What the community says
           </span>
           <div className="flex-1 h-px bg-foreground/10" />
           <span className="font-mono text-xs text-muted-foreground">
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
               }`}
             >
               <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-4">
-                Key Result
+                Impact
               </span>
               <p className="font-display text-3xl md:text-4xl text-foreground">
                 {activeTestimonial.metric}
@@ -135,10 +135,10 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Company Logos Marquee Label */}
+        {/* Community Logos Marquee Label */}
         <div className="mt-24 pt-12 border-t border-foreground/10">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
-            Trusted by forward-thinking teams
+            Used by Linux enthusiasts worldwide
           </p>
         </div>
       </div>
@@ -148,13 +148,13 @@ export function TestimonialsSection() {
         <div className="flex gap-16 items-center marquee">
           {[...Array(2)].map((_, setIdx) => (
             <div key={setIdx} className="flex gap-16 items-center shrink-0">
-              {["Meridian Labs", "Flux Systems", "Beacon AI", "Prism Analytics", "Nova Tech", "Quantum Corp", "Atlas Digital", "Vertex Labs"].map(
-                (company) => (
+              {["Ubuntu", "Arch", "Fedora", "Debian", "openSUSE", "Manjaro", "EndeavourOS", "Pop!_OS"].map(
+                (distro) => (
                   <span
-                    key={`${setIdx}-${company}`}
+                    key={`${setIdx}-${distro}`}
                     className="font-display text-xl md:text-2xl text-foreground/30 whitespace-nowrap hover:text-foreground transition-colors duration-300"
                   >
-                    {company}
+                    {distro}
                   </span>
                 )
               )}

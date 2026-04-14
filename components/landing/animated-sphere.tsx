@@ -81,7 +81,7 @@ export function AnimatedSphere() {
         ctx.fillText(point.char, point.x, point.y);
       });
 
-      time += 0.02;
+      time += 0.002;
       frameRef.current = requestAnimationFrame(render);
     };
 
