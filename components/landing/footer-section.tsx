@@ -11,21 +11,8 @@ const footerLinks = {
     { name: "Integrations", href: "#integrations" },
   ],
   Developers: [
-    { name: "Documentation", href: "#developers" },
-    { name: "API Reference", href: "#" },
-    { name: "SDK", href: "#developers" },
-    { name: "Status", href: "#" },
-  ],
-  Company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#", badge: "Hiring" },
-    { name: "Contact", href: "#" },
-  ],
-  Legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-  ],
+    { name: "Documentation", href: "https://github.com/lilrau/bootstack" }
+  ]
 };
 
 const socialLinks = [
@@ -49,12 +36,12 @@ export function FooterSection() {
             {/* Brand Column */}
             <div className="col-span-2">
               <a href="#" className="inline-flex items-center gap-2 mb-6">
-                <span className="text-2xl font-display">Optimus</span>
+                <span className="text-2xl font-display">BootStack</span>
                 <span className="text-xs text-muted-foreground font-mono">TM</span>
               </a>
 
               <p className="text-muted-foreground leading-relaxed mb-8 max-w-xs">
-                The platform for teams who ship. Build, deploy, and scale with unprecedented velocity.
+                The platform for Linux users who want to automate their setup.
               </p>
 
               {/* Social Links */}
@@ -84,11 +71,6 @@ export function FooterSection() {
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
                       >
                         {link.name}
-                        {"badge" in link && link.badge && (
-                          <span className="text-xs px-2 py-0.5 bg-foreground text-background rounded-full">
-                            {link.badge}
-                          </span>
-                        )}
                       </a>
                     </li>
                   ))}
@@ -101,7 +83,7 @@ export function FooterSection() {
         {/* Bottom Bar */}
         <div className="py-8 border-t border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            2025 Optimus. All rights reserved.
+            2026 BootStack. No rights reserved.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">

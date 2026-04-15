@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Instrument_Serif, JetBrains_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
+import { LenisProvider } from '@/components/lenis-provider'
 import './globals.css'
 
 const googleSansFlex = localFont({
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${googleSansFlex.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
         <Analytics />
       </body>
     </html>
