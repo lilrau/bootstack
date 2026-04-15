@@ -29,6 +29,15 @@ const features = [
   },
 ];
 
+/** Stable SVG numbers / SMIL times so SSR and the client serialize the same markup. */
+function svgCoord(n: number) {
+  return Math.round(n * 100) / 100;
+}
+
+function animBegin(i: number, stepSeconds: number) {
+  return `${(i * stepSeconds).toFixed(2)}s`;
+}
+
 function DeployVisual() {
   return (
     <svg viewBox="0 0 200 160" className="w-full h-full">
@@ -58,14 +67,14 @@ function DeployVisual() {
               attributeName="opacity"
               values="0.15;0.8;0.15"
               dur="2s"
-              begin={`${i * 0.15}s`}
+              begin={animBegin(i, 0.15)}
               repeatCount="indefinite"
             />
             <animate
               attributeName="width"
               values="20;120;20"
               dur="2s"
-              begin={`${i * 0.15}s`}
+              begin={animBegin(i, 0.15)}
               repeatCount="indefinite"
             />
           </rect>
@@ -92,14 +101,16 @@ function AIVisual() {
       {[0, 1, 2, 3, 4, 5].map((i) => {
         const angle = (i * 60) * (Math.PI / 180);
         const radius = 50;
+        const ox = svgCoord(100 + Math.cos(angle) * radius);
+        const oy = svgCoord(80 + Math.sin(angle) * radius);
         return (
           <g key={i}>
             {/* Connection line */}
             <line
               x1="100"
               y1="80"
-              x2={100 + Math.cos(angle) * radius}
-              y2={80 + Math.sin(angle) * radius}
+              x2={ox}
+              y2={oy}
               stroke="currentColor"
               strokeWidth="1"
               opacity="0.3"
@@ -108,15 +119,15 @@ function AIVisual() {
                 attributeName="opacity"
                 values="0.3;0.8;0.3"
                 dur="2s"
-                begin={`${i * 0.3}s`}
+                begin={animBegin(i, 0.3)}
                 repeatCount="indefinite"
               />
             </line>
             
             {/* Outer node */}
             <circle
-              cx={100 + Math.cos(angle) * radius}
-              cy={80 + Math.sin(angle) * radius}
+              cx={ox}
+              cy={oy}
               r="6"
               fill="none"
               stroke="currentColor"
@@ -126,7 +137,7 @@ function AIVisual() {
                 attributeName="r"
                 values="6;8;6"
                 dur="2s"
-                begin={`${i * 0.3}s`}
+                begin={animBegin(i, 0.3)}
                 repeatCount="indefinite"
               />
             </circle>
