@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Copy, Laptop, Terminal } from "lucide-react";
+import { AlertTriangle, ArrowLeft, CheckCircle2, Copy, Laptop, Terminal } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -231,28 +231,19 @@ export function DashboardWorkspace() {
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-[1400px] px-6 py-8 lg:px-10 lg:py-10">
-        <header className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <Link
-              href="/"
-              className="mb-3 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to landing page
-            </Link>
-            <h1 className="font-display text-4xl tracking-tight lg:text-5xl">BootStack Dashboard</h1>
-            <p className="mt-3 max-w-3xl text-muted-foreground">
-              Select your distro, choose apps, and generate installation scripts. This is now the main workspace where BootStack features can evolve.
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="gap-1">
-              <Laptop className="h-3.5 w-3.5" />
-              Dashboard beta
-            </Badge>
-            <Badge variant="outline">{selectedIds.length} selected</Badge>
-          </div>
-        </header>
+        <div
+          role="status"
+          className="sticky top-20 z-30 mb-6 flex gap-3 rounded-xl border border-amber-400/60 bg-amber-50 px-4 py-3 text-sm text-amber-950 shadow-md dark:border-amber-500/50 dark:bg-amber-950/35 dark:text-amber-50"
+        >
+          <AlertTriangle
+            className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400"
+            aria-hidden
+          />
+          <p className="leading-relaxed">
+            You&apos;re on a leaner, more bare-bones build for now. We&apos;re working on a fuller,
+            more visual workflow—this notice stays up until that ships.
+          </p>
+        </div>
 
         <section className="grid gap-6 lg:grid-cols-[280px_1fr_360px]">
           <Card className="gap-4 py-5">
